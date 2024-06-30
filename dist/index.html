@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <title>Frontend Mentor | Notifications page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="flex flex-col justify-center items-center  md:bg-gray-100">
+    <main class="flex flex-col justify-center items-center p-5  w-11/12 bg-white md:my-5 max-w-screen-sm rounded">
+      <div class="container flex my-6">
+        <h1 class="text-xl font-bold">Notifications</h1>
+        <span class="bg-blue-900 mx-2 text-white text-center h-6 w-7 rounded" id="notifications-count"
+          >3</span
+        >
+        <button class="ml-auto">
+          <h3 class="text-gray-600 hover:text-blue-700">Mark all as read</h3>
+        </button>
+      </div>
+
+      <section
+        class="container bg-blue-100 flex my-2 h-fit rounded items-center p-3"
+        data-status="unread"
+      >
+        <img
+          src="../assets/images/avatar-mark-webber.webp"
+          class="h-10 w-10 mr-3 mb-auto"
+          alt="avatar of angela gray"
+        />
+        <div>
+          <div class="flex">
+            <p class="font-bold text-black hover:text-blue-800">
+              Mark Webber
+              <span class="text-gray-600 font-normal"
+                >reacted to your recent post</span
+              >
+              <span class="text-gray-700">My first tournament today!</span>
+              <span class="inline-flex w-2 h-2 ml-1 bg-red-600 rounded-full" name="notification-badge">
+            </p>
+          </div>
+          <h5 class="text-gray-400">1m ago</h5>
+        </div>
+      </section>
+
+      <section
+        class="container bg-blue-100 flex my-2 h-fit rounded items-center p-3"
+        data-status="unread"
+      >
+        <img
+          src="../assets/images/avatar-angela-gray.webp"
+          class="h-10 w-10 mr-3 mb-auto"
+          alt="avatar of angela gray"
+        />
+        <div>
+          <div class="flex">
+            <p class="font-bold text-black hover:text-blue-800">
+              Angela Gray
+              <span class="text-gray-600 font-normal">followed you</span>
+              <span class="inline-flex w-2 h-2 ml-1 bg-red-600 rounded-full" name="notification-badge"></span>
+            </p>
+            
+          </div>
+          <h5 class="text-gray-400">5m ago</h5>
+        </div>
+      </section>
+
+      <section
+        class="container bg-blue-100 flex my-2 h-fit rounded items-center p-3"
+        data-status="unread"
+      >
+        <img
+          src="../assets/images/avatar-jacob-thompson.webp"
+          class="h-10 w-10 mr-3 mb-auto"
+          alt="avatar of angela gray"
+        />
+        <div>
+          <div class="flex">
+            <p class="font-bold text-black hover:text-blue-800">
+              Jacob Thompson
+              <span class="text-gray-600 font-normal">
+                has joined your group
+                <a class="font-bold hover:text-blue-800">Chess Club</a>
+              </span>
+              <span class="inline-flex w-2 h-2 ml-1 bg-red-600 rounded-full" name="notification-badge"></span>
+            </p>
+          </div>
+          <h5 class="text-gray-400">1 day ago</h5>
+        </div>
+      </section>
+
+      <section class="container flex my-2 h-fit rounded items-center p-3"
+      data-status="read">
+        <img
+          src="../assets/images/avatar-rizky-hasanuddin.webp"
+          class="h-10 w-10 mr-3 mb-auto"
+          alt="avatar of user"
+        />
+        <div>
+          <div class="flex">
+            <p class="font-bold text-black hover:text-blue-800">
+              Rizky Hasanuddin
+              <span class="text-gray-600 font-normal">
+                sent you a private message
+              </span>
+            </p>
+          </div>
+          <h5 class="text-gray-400">1 week ago</h5>
+          <div class="border border-gray-300 rounded">
+            <p class="p-4 hover:bg-blue-100">
+              Hello, thanks for setting you the Chess Club. I've been a member
+              for a few weeks now and I'm already having lots of fun and
+              improving my game.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="container flex my-2 h-fit rounded items-center p-3"
+      data-status="read">
+        <img
+          src="../assets/images/avatar-kimberly-smith.webp"
+          class="h-10 w-10 mr-3 mb-auto"
+          alt="avatar of angela gray"
+        />
+        <div class="w-full">
+          <div class="flex w-full">
+            <p class="font-bold text-black hover:text-blue-800">
+              Kimberly Smith
+              <span class="text-gray-600 font-normal">
+                commented on your picture
+              </span>
+            </p>
+            <img src="../assets/images/image-chess.webp" 
+            class="h-10 w-10 ml-auto"
+            alt="your picture">
+          </div>
+          <h5 class="text-gray-400">1 week ago</h5>
+        </div>
+      </section>
+
+      <section class="container flex my-2 h-fit rounded items-center p-3"
+      data-status="read">
+        <img
+          src="../assets/images/avatar-nathan-peterson.webp"
+          class="h-10 w-10 mr-3 mb-auto"
+          alt="avatar of angela gray"
+        />
+        <div>
+          <div class="flex">
+            <p class="font-bold text-black hover:text-blue-800">
+              Nathan Peterson
+              <span class="text-gray-600 font-normal">
+                reacted to your recent post</span
+              >
+              <span class="text-gray-700">5 end-game strategies to increase your win rate </span>
+            </p>
+          </div>
+          <h5 class="text-gray-400">2 week ago</h5>
+        </div>
+      </section>
+
+      <section class="container flex my-2 h-fit rounded items-center p-3"
+      data-status="read">
+        <img
+          src="../assets/images/avatar-anna-kim.webp"
+          class="h-10 w-10 mr-3 mb-auto"
+          alt="avatar of angela gray"
+        />
+        <div>
+          <div class="flex">
+            <p class="font-bold text-black hover:text-blue-800">
+              Anna Kim
+              <span class="text-gray-600 font-normal">
+                left the group
+                <a class="font-bold hover:text-blue-800">Chess Club</a>
+              </span>
+            </p>
+          </div>
+          <h5 class="text-gray-400">2 week ago</h5>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="index.js"></script>
+</html>
